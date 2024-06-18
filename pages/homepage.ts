@@ -13,4 +13,8 @@ export class HomePage {
     async goToHomepage() {
       await this.page.goto('https://shop.polymer-project.org/');
     }
+
+    async clickTheShopButton() {
+      await this.shopLink.click();
+    }
 }
