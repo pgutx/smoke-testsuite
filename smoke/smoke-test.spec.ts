@@ -30,19 +30,19 @@ test.describe('Smoke Test - Homepage', () => {
 
     await test.step('AC: The button is visible', async () => {
 
-      await expect(homePage.shopLink).toBeVisible();
+      await expect(homePage.shopButton).toBeVisible();
 
     });
 
     await test.step('AC: The button is enabled', async () => {
 
-      await expect(homePage.shopLink).toBeEnabled();
+      await expect(homePage.shopButton).toBeEnabled();
 
     });
 
     await test.step('AC: The button is clickable', async() =>{
 
-      await homePage.clickTheShopButton();
+      await homePage.clickShopButton();
 
       await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/');
       
@@ -64,11 +64,35 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is clickable', async() =>{
+    await test.step('AC: The button is clickable', async() => {
 
-      await homePage.clickTheCartButton();
+      await homePage.clickCartButton();
 
       await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/cart');
+      
+    });
+    
+  });
+
+  test('Scenario: Men\'s Outerwear button is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The button is visible', async () => {
+      
+      await expect(homePage.mensOuterwearButton).toBeVisible();
+
+    });
+
+    await test.step('AC: The button is editable', async () => {
+      
+      await expect(homePage.mensOuterwearButton).toBeEditable();
+
+    });
+
+    await test.step('AC: The button is clickable', async() => {
+
+      await homePage.clickMensOuterwearButton();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
       
     });
 
