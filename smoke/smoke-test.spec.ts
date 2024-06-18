@@ -50,4 +50,28 @@ test.describe('Smoke Test - Homepage', () => {
 
   });
 
+  test('Scenario: Cart button is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The button is visible', async () => {
+
+      await expect(homePage.cartButton).toBeVisible();
+
+    });
+
+    await test.step('AC: The button is enabled', async () => {
+
+      await expect(homePage.cartButton).toBeEnabled();
+
+    });
+
+    await test.step('AC: The button is clickable', async() =>{
+
+      await homePage.clickTheCartButton();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/cart');
+      
+    });
+
+  });
+
 });

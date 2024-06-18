@@ -4,10 +4,12 @@ export class HomePage {
 
   readonly page: Page;
   readonly shopLink: Locator;
+  readonly cartButton: Locator;
 
     constructor(page: Page) {
       this.page = page;
       this.shopLink = page.getByLabel('SHOP Home');
+      this.cartButton = page.getByLabel('Shopping cart: 0 items');
     }
 
     async goToHomepage() {
@@ -17,4 +19,9 @@ export class HomePage {
     async clickTheShopButton() {
       await this.shopLink.click();
     }
+
+    async clickTheCartButton() {
+      await this.cartButton.click();
+    }
+
 }
