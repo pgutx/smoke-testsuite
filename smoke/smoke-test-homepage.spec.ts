@@ -386,7 +386,7 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: Correct text is displayed - Men\'s Outerwear', async () => {
+    await test.step('AC: Correct text is displayed - Ladies Outerwear', async () => {
 
       await expect(homePage.ladiesOuterwearHeader).toHaveText(/Ladies Outerwear/);
 
@@ -402,7 +402,7 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: Correct text is displayed - Men\'s Outerwear', async () => {
+    await test.step('AC: Correct text is displayed - Men\'s T-Shirts', async () => {
 
       await expect(homePage.mensTshirtsHeader).toHaveText(/Men's T-Shirts/);
 
@@ -418,7 +418,7 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: Correct text is displayed - Men\'s Outerwear', async () => {
+    await test.step('AC: Correct text is displayed - Ladies T-shirts', async () => {
 
       await expect(homePage.ladiesTshirtsHeader).toHaveText(/Ladies T-Shirts/);
 
