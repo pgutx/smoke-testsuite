@@ -13,6 +13,14 @@ export class HomePage {
   readonly ladiesOuterwearImage: Locator;
   readonly mensTshirtImage: Locator;
   readonly ladiesTshirtImage: Locator;
+  readonly mensOuterwearShopButton: Locator;
+  readonly ladiesOuterwearShopButton: Locator;
+  readonly mensTshirtsShopButton: Locator;
+  readonly ladiesTshirtsShopButton: Locator;
+  readonly mensOuterwearHeader: Locator;
+  readonly ladiesOuterwearHeader: Locator;
+  readonly mensTshirtsHeader: Locator;
+  readonly ladiesTshirtsHeader: Locator;
 
     constructor(page: Page) {
       this.page = page;
@@ -26,6 +34,14 @@ export class HomePage {
       this.ladiesOuterwearImage = page.getByRole('main').getByRole('link', {name: 'Ladies Outerwear', exact: true});
       this.mensTshirtImage = page.getByRole('main').getByRole('link', { name: 'Men\'s T-Shirts', exact: true });
       this.ladiesTshirtImage = page.getByRole('main').getByRole('link', { name: 'Ladies T-Shirts', exact: true });
+      this.mensOuterwearShopButton = page.getByLabel('Men\'s Outerwear Shop Now');
+      this.ladiesOuterwearShopButton = page.getByLabel('Ladies Outerwear Shop Now');
+      this.mensTshirtsShopButton = page.getByLabel('Men\'s T-Shirts Shop Now');
+      this.ladiesTshirtsShopButton = page.getByLabel('Ladies T-Shirts Shop Now');
+      this.mensOuterwearHeader = page.getByRole('heading', { name: 'Men\'s Outerwear ' });
+      this.ladiesOuterwearHeader = page.getByRole('heading', { name: 'Ladies Outerwear ' });
+      this.mensTshirtsHeader = page.getByRole('heading', { name: 'Men\'s T-Shirts ' });
+      this.ladiesTshirtsHeader = page.getByRole('heading', { name: 'Ladies T-Shirts ' });
     }
 
     async goToHomepage() {
@@ -71,4 +87,21 @@ export class HomePage {
     async clickLadiesTshirtsImage() {
       await this.ladiesTshirtImage.click();
     }
+
+    async clickMensOuterwearShopButton() {
+      await this.mensOuterwearShopButton.click();
+    }
+
+    async clickLadiesOuterwearShopButton() {
+      await this.ladiesOuterwearShopButton.click();
+    }
+
+    async clickMensTshirtsShopButton() {
+      await this.mensTshirtsShopButton.click();
+    }
+
+    async clickLadiesTshirtsShopButton() {
+      await this.ladiesTshirtsShopButton.click();
+    }
+
 }

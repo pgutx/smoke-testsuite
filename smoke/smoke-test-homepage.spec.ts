@@ -266,4 +266,164 @@ test.describe('Smoke Test - Homepage', () => {
 
   });
 
+  test('Scenario: Men\'s Outerwear Shop Now button is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The button is visible', async () => {
+      
+      await expect(homePage.mensOuterwearShopButton).toBeVisible();
+
+    });
+
+    await test.step('AC: The button is editable', async () => {
+      
+      await expect(homePage.mensOuterwearShopButton).toBeEditable();
+
+    });
+
+    await test.step('AC: The button leads to correct URL', async() => {
+
+      await homePage.clickMensOuterwearShopButton();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
+      
+    });
+
+  });
+
+  test('Scenario: Ladies Outerwear Shop Now button is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The button is visible', async () => {
+      
+      await expect(homePage.ladiesOuterwearShopButton).toBeVisible();
+
+    });
+
+    await test.step('AC: The button is editable', async () => {
+      
+      await expect(homePage.ladiesOuterwearShopButton).toBeEditable();
+
+    });
+
+    await test.step('AC: The button leads to correct URL', async() => {
+
+      await homePage.clickLadiesOuterwearShopButton();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/ladies_outerwear');
+      
+    });
+
+  });
+
+  test('Scenario: Men\'s T-Shirts Shop Now button is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The button is visible', async () => {
+      
+      await expect(homePage.mensTshirtsShopButton).toBeVisible();
+
+    });
+
+    await test.step('AC: The button is editable', async () => {
+      
+      await expect(homePage.mensTshirtsShopButton).toBeEditable();
+
+    });
+
+    await test.step('AC: The button leads to correct URL', async() => {
+
+      await homePage.clickMensTshirtsShopButton();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/mens_tshirts');
+      
+    });
+
+  });
+
+  test('Scenario: Ladies T-Shirts Shop Now button is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The button is visible', async () => {
+      
+      await expect(homePage.ladiesTshirtsShopButton).toBeVisible();
+
+    });
+
+    await test.step('AC: The button is editable', async () => {
+      
+      await expect(homePage.ladiesTshirtsShopButton).toBeEditable();
+
+    });
+
+    await test.step('AC: The button leads to correct URL', async() => {
+
+      await homePage.clickLadiesTshirtsShopButton();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/ladies_tshirts');
+      
+    });
+
+  });
+
+  test('Scenario: Men\'s Outerwear header has correct text', async ({ homePage }) => {
+    
+    await test.step('AC: The heading is visible', async () => {
+
+      await expect(homePage.mensOuterwearHeader).toBeVisible();
+
+    });
+
+    await test.step('AC: Correct text is displayed - Men\'s Outerwear', async () => {
+
+      await expect(homePage.mensOuterwearHeader).toHaveText(/Men's Outerwear/);
+
+    });
+
+  });
+
+  test('Scenario: Ladies Outerwear header has correct text', async ({ homePage }) => {
+    
+    await test.step('AC: The heading is visible', async () => {
+
+      await expect(homePage.ladiesOuterwearHeader).toBeVisible();
+
+    });
+
+    await test.step('AC: Correct text is displayed - Men\'s Outerwear', async () => {
+
+      await expect(homePage.ladiesOuterwearHeader).toHaveText(/Ladies Outerwear/);
+
+    });
+
+  });
+
+  test('Scenario: Men\'s T-Shirts header has correct text', async ({ homePage }) => {
+    
+    await test.step('AC: The heading is visible', async () => {
+
+      await expect(homePage.mensTshirtsHeader).toBeVisible();
+
+    });
+
+    await test.step('AC: Correct text is displayed - Men\'s Outerwear', async () => {
+
+      await expect(homePage.mensTshirtsHeader).toHaveText(/Men's T-Shirts/);
+
+    });
+
+  });
+
+  test('Scenario: Ladies T-Shirts header has correct text', async ({ homePage }) => {
+    
+    await test.step('AC: The heading is visible', async () => {
+
+      await expect(homePage.ladiesTshirtsHeader).toBeVisible();
+
+    });
+
+    await test.step('AC: Correct text is displayed - Men\'s Outerwear', async () => {
+
+      await expect(homePage.ladiesTshirtsHeader).toHaveText(/Ladies T-Shirts/);
+
+    });
+
+  });
+
 });
