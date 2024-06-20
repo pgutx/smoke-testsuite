@@ -9,6 +9,10 @@ export class HomePage {
   readonly ladiesOuterwearButton: Locator;
   readonly mensTshirtButton: Locator;
   readonly ladiesTshirtButton: Locator;
+  readonly mensOuterwearImage: Locator;
+  readonly ladiesOuterwearImage: Locator;
+  readonly mensTshirtImage: Locator;
+  readonly ladiesTshirtImage: Locator;
 
     constructor(page: Page) {
       this.page = page;
@@ -18,6 +22,10 @@ export class HomePage {
       this.ladiesOuterwearButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies Outerwear' });
       this.mensTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Men\'s T-Shirts' });
       this.ladiesTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies T-Shirts' });
+      this.mensOuterwearImage = page.getByRole('main').getByRole('link', { name: 'Men\'s Outerwear', exact: true });
+      this.ladiesOuterwearImage = page.getByRole('main').getByRole('link', {name: 'Ladies Outerwear', exact: true});
+      this.mensTshirtImage = page.getByRole('main').getByRole('link', { name: 'Men\'s T-Shirts', exact: true });
+      this.ladiesTshirtImage = page.getByRole('main').getByRole('link', { name: 'Ladies T-Shirts', exact: true });
     }
 
     async goToHomepage() {
@@ -48,4 +56,19 @@ export class HomePage {
       await this.ladiesTshirtButton.click();
     }
 
+    async clickMensOuterwearImage() {
+      await this.mensOuterwearImage.click();
+    }
+
+    async clickLadiesOuterwearImage() {
+      await this.ladiesOuterwearImage.click();
+    }
+
+    async clickMensTshirtsImage() {
+      await this.mensTshirtImage.click();
+    }
+
+    async clickLadiesTshirtsImage() {
+      await this.ladiesTshirtImage.click();
+    }
 }

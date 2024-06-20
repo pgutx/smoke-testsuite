@@ -40,7 +40,7 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is clickable and leads to correct URL', async() =>{
+    await test.step('AC: The button leads to correct URL', async() =>{
 
       await homePage.clickShopButton();
 
@@ -64,7 +64,7 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is clickable and leads to correct URL', async() => {
+    await test.step('AC: The button leads to correct URL', async() => {
 
       await homePage.clickCartButton();
 
@@ -88,7 +88,7 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is clickable and leads to correct URL', async() => {
+    await test.step('AC: The button leads to correct URL', async() => {
 
       await homePage.clickMensOuterwearButton();
 
@@ -112,7 +112,7 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is clickable and leads to correct URL', async() => {
+    await test.step('AC: The button leads to correct URL', async() => {
 
       await homePage.clickLadiesOuterwearButton();
 
@@ -136,7 +136,7 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is clickable and leads to correct URL', async() => {
+    await test.step('AC: The button leads to correct URL', async() => {
 
       await homePage.clickMensTshirtsButton();
 
@@ -160,9 +160,105 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is clickable and leads to correct URL', async() => {
+    await test.step('AC: The button leads to correct URL', async() => {
 
       await homePage.clickLadiesTshirtsButton();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/ladies_tshirts');
+      
+    });
+
+  });
+
+  test('Scenario: Men\'s Outerwear image is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The image is visible', async () => {
+      
+      await expect(homePage.mensOuterwearImage).toBeVisible();
+
+    });
+
+    await test.step('AC: The image is editable', async () => {
+      
+      await expect(homePage.mensOuterwearImage).toBeEditable();
+
+    });
+
+    await test.step('AC: The image leads to correct URL', async() => {
+
+      await homePage.clickMensOuterwearImage();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
+      
+    });
+
+  });
+
+  test('Scenario: Ladies Outerwear image is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The image is visible', async () => {
+      
+      await expect(homePage.ladiesOuterwearImage).toBeVisible();
+
+    });
+
+    await test.step('AC: The image is editable', async () => {
+      
+      await expect(homePage.ladiesOuterwearImage).toBeEditable();
+
+    });
+
+    await test.step('AC: The image leads to correct URL', async() => {
+
+      await homePage.clickLadiesOuterwearImage();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/ladies_outerwear');
+      
+    });
+
+  });
+
+  test('Scenario: Men\'s T-Shirts image is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The image is visible', async () => {
+      
+      await expect(homePage.mensTshirtImage).toBeVisible();
+
+    });
+
+    await test.step('AC: The image is editable', async () => {
+      
+      await expect(homePage.mensTshirtImage).toBeEditable();
+
+    });
+
+    await test.step('AC: The image leads to correct URL', async() => {
+
+      await homePage.clickMensTshirtsImage();
+
+      await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/mens_tshirts');
+      
+    });
+
+  });
+
+  test('Scenario: Ladies T-Shirts image is interactable on the homepage', async ({ homePage }) => {
+
+    await test.step('AC: The image is visible', async () => {
+      
+      await expect(homePage.ladiesTshirtImage).toBeVisible();
+
+    });
+
+    await test.step('AC: The image is editable', async () => {
+      
+      await expect(homePage.ladiesTshirtImage).toBeEditable();
+
+    });
+
+    await test.step('AC: The image leads to correct URL', async() => {
+
+      await homePage.clickLadiesTshirtsImage();
 
       await expect(homePage.page).toHaveURL('https://shop.polymer-project.org/list/ladies_tshirts');
       
