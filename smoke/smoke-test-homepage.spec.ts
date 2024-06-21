@@ -1,6 +1,6 @@
 import { test, expect } from '../utilities/fixtures';
 
-test.beforeEach(async ({ homePage, context }) => {
+test.beforeEach(async ({ homePage }) => {
   await homePage.goToHomepage();
 });
 
