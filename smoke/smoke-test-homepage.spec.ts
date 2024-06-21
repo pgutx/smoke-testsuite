@@ -1,6 +1,6 @@
 import { test, expect } from '../utilities/fixtures';
 
-test.beforeEach(async ({ homePage }) => {
+test.beforeEach(async ({ homePage, context }) => {
   await homePage.goToHomepage();
 });
 
@@ -172,15 +172,15 @@ test.describe('Smoke Test - Homepage', () => {
 
   test('Scenario: Men\'s Outerwear image is interactable on the homepage', async ({ homePage }) => {
 
-    await test.step('AC: The image is visible', async () => {
+    await test.step('AC: The image link is visible', async () => {
       
-      await expect(homePage.mensOuterwearImage).toBeVisible();
+      await expect(homePage.mensOuterwearImageLink).toBeVisible();
 
     });
 
-    await test.step('AC: The image is editable', async () => {
+    await test.step('AC: The image link is editable', async () => {
       
-      await expect(homePage.mensOuterwearImage).toBeEditable();
+      await expect(homePage.mensOuterwearImageLink).toBeEditable();
 
     });
 
@@ -196,15 +196,15 @@ test.describe('Smoke Test - Homepage', () => {
 
   test('Scenario: Ladies Outerwear image is interactable on the homepage', async ({ homePage }) => {
 
-    await test.step('AC: The image is visible', async () => {
+    await test.step('AC: The image link is visible', async () => {
       
-      await expect(homePage.ladiesOuterwearImage).toBeVisible();
+      await expect(homePage.ladiesOuterwearImageLink).toBeVisible();
 
     });
 
-    await test.step('AC: The image is editable', async () => {
+    await test.step('AC: The image link is editable', async () => {
       
-      await expect(homePage.ladiesOuterwearImage).toBeEditable();
+      await expect(homePage.ladiesOuterwearImageLink).toBeEditable();
 
     });
 
@@ -220,15 +220,15 @@ test.describe('Smoke Test - Homepage', () => {
 
   test('Scenario: Men\'s T-Shirts image is interactable on the homepage', async ({ homePage }) => {
 
-    await test.step('AC: The image is visible', async () => {
+    await test.step('AC: The image link is visible', async () => {
       
-      await expect(homePage.mensTshirtImage).toBeVisible();
+      await expect(homePage.mensTshirtImageLink).toBeVisible();
 
     });
 
-    await test.step('AC: The image is editable', async () => {
+    await test.step('AC: The image link is editable', async () => {
       
-      await expect(homePage.mensTshirtImage).toBeEditable();
+      await expect(homePage.mensTshirtImageLink).toBeEditable();
 
     });
 
@@ -244,15 +244,15 @@ test.describe('Smoke Test - Homepage', () => {
 
   test('Scenario: Ladies T-Shirts image is interactable on the homepage', async ({ homePage }) => {
 
-    await test.step('AC: The image is visible', async () => {
+    await test.step('AC: The image link is visible', async () => {
       
-      await expect(homePage.ladiesTshirtImage).toBeVisible();
+      await expect(homePage.ladiesTshirtImageLink).toBeVisible();
 
     });
 
-    await test.step('AC: The image is editable', async () => {
+    await test.step('AC: The image link is editable', async () => {
       
-      await expect(homePage.ladiesTshirtImage).toBeEditable();
+      await expect(homePage.ladiesTshirtImageLink).toBeEditable();
 
     });
 
@@ -421,6 +421,70 @@ test.describe('Smoke Test - Homepage', () => {
     await test.step('AC: Correct text is displayed - Ladies T-shirts', async () => {
 
       await expect(homePage.ladiesTshirtsHeader).toHaveText(/Ladies T-Shirts/);
+
+    });
+
+  });
+
+  test('Scenario: Men\'s Outerwear image is visible on the homepage', async ({ homePage }) => {
+    
+    await test.step('AC: The image is visible', async () => {
+
+      await expect(homePage.mensOuterwearImage).toBeVisible();
+
+    });
+
+    await test.step('AC: The image is enabled', async () => {
+
+      await expect(homePage.mensOuterwearImage).toBeEnabled();
+
+    });
+
+  });
+
+  test('Scenario: Ladies Outerwear image is visible on the homepage', async ({ homePage }) => {
+    
+    await test.step('AC: The image is visible', async () => {
+
+      await expect(homePage.ladiesOuterwearImage).toBeVisible();
+
+    });
+
+    await test.step('AC: The image is enabled', async () => {
+
+      await expect(homePage.ladiesOuterwearImage).toBeEnabled();
+
+    });
+
+  });
+
+  test('Scenario: Men\'s T-Shirts image is visible on the homepage', async ({ homePage }) => {
+    
+    await test.step('AC: The image is visible', async () => {
+
+      await expect(homePage.mensTshirtsImage).toBeVisible();
+
+    });
+
+    await test.step('AC: The image is enabled', async () => {
+
+      await expect(homePage.mensTshirtsImage).toBeEnabled();
+
+    });
+
+  });
+
+  test('Scenario: Ladies T-Shirts image is visible on the homepage', async ({ homePage }) => {
+    
+    await test.step('AC: The image is visible', async () => {
+
+      await expect(homePage.ladiesTshirtsImage).toBeVisible();
+
+    });
+
+    await test.step('AC: The image is enabled', async () => {
+
+      await expect(homePage.ladiesTshirtsImage).toBeEnabled();
 
     });
 

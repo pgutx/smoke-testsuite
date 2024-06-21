@@ -9,10 +9,10 @@ export class HomePage {
   readonly ladiesOuterwearButton: Locator;
   readonly mensTshirtButton: Locator;
   readonly ladiesTshirtButton: Locator;
-  readonly mensOuterwearImage: Locator;
-  readonly ladiesOuterwearImage: Locator;
-  readonly mensTshirtImage: Locator;
-  readonly ladiesTshirtImage: Locator;
+  readonly mensOuterwearImageLink: Locator;
+  readonly ladiesOuterwearImageLink: Locator;
+  readonly mensTshirtImageLink: Locator;
+  readonly ladiesTshirtImageLink: Locator;
   readonly mensOuterwearShopButton: Locator;
   readonly ladiesOuterwearShopButton: Locator;
   readonly mensTshirtsShopButton: Locator;
@@ -21,6 +21,10 @@ export class HomePage {
   readonly ladiesOuterwearHeader: Locator;
   readonly mensTshirtsHeader: Locator;
   readonly ladiesTshirtsHeader: Locator;
+  readonly mensOuterwearImage: Locator;
+  readonly ladiesOuterwearImage: Locator;
+  readonly mensTshirtsImage: Locator;
+  readonly ladiesTshirtsImage: Locator;
 
     constructor(page: Page) {
       this.page = page;
@@ -30,10 +34,10 @@ export class HomePage {
       this.ladiesOuterwearButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies Outerwear' });
       this.mensTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Men\'s T-Shirts' });
       this.ladiesTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies T-Shirts' });
-      this.mensOuterwearImage = page.getByRole('main').getByRole('link', { name: 'Men\'s Outerwear', exact: true });
-      this.ladiesOuterwearImage = page.getByRole('main').getByRole('link', {name: 'Ladies Outerwear', exact: true});
-      this.mensTshirtImage = page.getByRole('main').getByRole('link', { name: 'Men\'s T-Shirts', exact: true });
-      this.ladiesTshirtImage = page.getByRole('main').getByRole('link', { name: 'Ladies T-Shirts', exact: true });
+      this.mensOuterwearImageLink = page.getByRole('main').getByRole('link', { name: 'Men\'s Outerwear', exact: true });
+      this.ladiesOuterwearImageLink = page.getByRole('main').getByRole('link', {name: 'Ladies Outerwear', exact: true});
+      this.mensTshirtImageLink = page.getByRole('main').getByRole('link', { name: 'Men\'s T-Shirts', exact: true });
+      this.ladiesTshirtImageLink = page.getByRole('main').getByRole('link', { name: 'Ladies T-Shirts', exact: true });
       this.mensOuterwearShopButton = page.getByLabel('Men\'s Outerwear Shop Now');
       this.ladiesOuterwearShopButton = page.getByLabel('Ladies Outerwear Shop Now');
       this.mensTshirtsShopButton = page.getByLabel('Men\'s T-Shirts Shop Now');
@@ -42,6 +46,10 @@ export class HomePage {
       this.ladiesOuterwearHeader = page.getByRole('heading', { name: 'Ladies Outerwear ' });
       this.mensTshirtsHeader = page.getByRole('heading', { name: 'Men\'s T-Shirts ' });
       this.ladiesTshirtsHeader = page.getByRole('heading', { name: 'Ladies T-Shirts ' });
+      this.mensOuterwearImage = page.getByAltText('Men\'s Outerwear');
+      this.ladiesOuterwearImage = page.getByAltText('Ladies Outerwear');
+      this.mensTshirtsImage = page.getByAltText('Men\'s T-shirts');
+      this.ladiesTshirtsImage = page.getByAltText('Ladies T-shirts');
     }
 
     async goToHomepage() {
@@ -73,19 +81,19 @@ export class HomePage {
     }
 
     async clickMensOuterwearImage() {
-      await this.mensOuterwearImage.click();
+      await this.mensOuterwearImageLink.click();
     }
 
     async clickLadiesOuterwearImage() {
-      await this.ladiesOuterwearImage.click();
+      await this.ladiesOuterwearImageLink.click();
     }
 
     async clickMensTshirtsImage() {
-      await this.mensTshirtImage.click();
+      await this.mensTshirtImageLink.click();
     }
 
     async clickLadiesTshirtsImage() {
-      await this.ladiesTshirtImage.click();
+      await this.ladiesTshirtImageLink.click();
     }
 
     async clickMensOuterwearShopButton() {
