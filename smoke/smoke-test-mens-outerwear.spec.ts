@@ -26,4 +26,51 @@ test.describe('Smoke Test - Men\'s Outerwear page', () => {
     
     });
 
+    test('Scenario: SHOP button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+
+      await test.step('AC: The button is visible', async () => {
+  
+        await expect(mensOuterwear.shopButton).toBeVisible();
+  
+      });
+  
+      await test.step('AC: The button is enabled', async () => {
+  
+        await expect(mensOuterwear.shopButton).toBeEnabled();
+  
+      });
+  
+      await test.step('AC: The button leads to correct URL', async() =>{
+  
+        await mensOuterwear.clickShopButton();
+  
+        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/');
+        
+      });
+  
+    });
+  
+    test('Scenario: Cart button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+      await test.step('AC: The button is visible', async () => {
+  
+        await expect(mensOuterwear.cartButton).toBeVisible();
+  
+      });
+  
+      await test.step('AC: The button is enabled', async () => {
+  
+        await expect(mensOuterwear.cartButton).toBeEnabled();
+  
+      });
+  
+      await test.step('AC: The button leads to correct URL', async() => {
+  
+        await mensOuterwear.clickCartButton();
+  
+        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/cart');
+        
+      });
+      
+    });
 });
