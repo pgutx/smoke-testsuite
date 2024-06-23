@@ -1,3 +1,4 @@
+import { MensOuterwear } from '../pages/mens-outerwear';
 import { test, expect } from '../utilities/fixtures';
 
 test.beforeEach(async ({ mensOuterwear }) => {
@@ -6,184 +7,216 @@ test.beforeEach(async ({ mensOuterwear }) => {
 
 test.describe('Smoke Test - Men\'s Outerwear page', () => {
 
-    test('Scenario: User sees the correct URL', async({ mensOuterwear }) => {
+  test('Scenario: User sees the correct URL', async({ mensOuterwear }) => {
   
-      await test.step('AC: Correct <URL>: https://shop.polymer-project.org/list/mens_outerwear is displayed', async () => {
+    await test.step('AC: Correct <URL>: https://shop.polymer-project.org/list/mens_outerwear is displayed', async () => {
   
-        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
-  
-      });
+      await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
   
     });
+  
+  });
 
-    test('Scenario: User sees the correct Title', async({ mensOuterwear }) => {
+  test('Scenario: User sees the correct Title', async({ mensOuterwear }) => {
 
-      await test.step('AC: Correct <Title>: Men\'s Outerwear - SHOP is displayed', async () => {
+    await test.step('AC: Correct <Title>: Men\'s Outerwear - SHOP is displayed', async () => {
     
-        await expect(mensOuterwear.page).toHaveTitle(/Men's Outerwear - SHOP/);
-    
-      });
+      await expect(mensOuterwear.page).toHaveTitle(/Men's Outerwear - SHOP/);
     
     });
+    
+  });
 
-    test('Scenario: SHOP button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  test('Scenario: SHOP button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
 
-      await test.step('AC: The button is visible', async () => {
+    await test.step('AC: The button is visible', async () => {
   
-        await expect(mensOuterwear.shopButton).toBeVisible();
+      await expect(mensOuterwear.shopButton).toBeVisible();
   
-      });
+    });
   
-      await test.step('AC: The button is enabled', async () => {
+    await test.step('AC: The button is enabled', async () => {
   
-        await expect(mensOuterwear.shopButton).toBeEnabled();
+      await expect(mensOuterwear.shopButton).toBeEnabled();
   
-      });
+    });
   
-      await test.step('AC: The button leads to correct URL', async() =>{
+    await test.step('AC: The button leads to correct URL', async() =>{
   
-        await mensOuterwear.clickShopButton();
+      await mensOuterwear.clickShopButton();
   
-        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/');
+      await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/');
         
-      });
+    });
+  
+  });
+  
+  test('Scenario: Cart button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+    await test.step('AC: The button is visible', async () => {
+  
+      await expect(mensOuterwear.cartButton).toBeVisible();
   
     });
   
-    test('Scenario: Cart button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+    await test.step('AC: The button is enabled', async () => {
   
-      await test.step('AC: The button is visible', async () => {
+      await expect(mensOuterwear.cartButton).toBeEnabled();
   
-        await expect(mensOuterwear.cartButton).toBeVisible();
+    });
   
-      });
+    await test.step('AC: The button leads to correct URL', async() => {
   
-      await test.step('AC: The button is enabled', async () => {
+      await mensOuterwear.clickCartButton();
   
-        await expect(mensOuterwear.cartButton).toBeEnabled();
-  
-      });
-  
-      await test.step('AC: The button leads to correct URL', async() => {
-  
-        await mensOuterwear.clickCartButton();
-  
-        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/cart');
+      await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/cart');
         
-      });
+    });
       
-    });
+  });
 
-    test('Scenario: Men\'s Outerwear button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  test('Scenario: Men\'s Outerwear button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
 
-      await test.step('AC: The button is visible', async () => {
+    await test.step('AC: The button is visible', async () => {
         
-        await expect(mensOuterwear.mensOuterwearButton).toBeVisible();
-  
-      });
-  
-      await test.step('AC: The button is editable', async () => {
-        
-        await expect(mensOuterwear.mensOuterwearButton).toBeEditable();
-  
-      });
-  
-      await test.step('AC: The button leads to correct URL', async() => {
-  
-        await mensOuterwear.clickMensOuterwearButton();
-  
-        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
-        
-      });
+      await expect(mensOuterwear.mensOuterwearButton).toBeVisible();
   
     });
   
-    test('Scenario: Ladies Outerwear button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
-  
-      await test.step('AC: The button is visible', async () => {
+    await test.step('AC: The button is editable', async () => {
         
-        await expect(mensOuterwear.ladiesOuterwearButton).toBeVisible();
-  
-      });
-  
-      await test.step('AC: The button is editable', async () => {
-        
-        await expect(mensOuterwear.ladiesOuterwearButton).toBeEditable();
-  
-      });
-  
-      await test.step('AC: The button leads to correct URL', async() => {
-  
-        await mensOuterwear.clickLadiesOuterwearButton();
-  
-        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/ladies_outerwear');
-        
-      });
+      await expect(mensOuterwear.mensOuterwearButton).toBeEditable();
   
     });
   
-    test('Scenario: Men\'s T-Shirts button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+    await test.step('AC: The button leads to correct URL', async() => {
   
-      await test.step('AC: The button is visible', async () => {
+      await mensOuterwear.clickMensOuterwearButton();
+  
+      await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
         
-        await expect(mensOuterwear.mensTshirtButton).toBeVisible();
+    });
   
-      });
+  });
   
-      await test.step('AC: The button is editable', async () => {
+  test('Scenario: Ladies Outerwear button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+    await test.step('AC: The button is visible', async () => {
         
-        await expect(mensOuterwear.mensTshirtButton).toBeEditable();
-  
-      });
-  
-      await test.step('AC: The button leads to correct URL', async() => {
-  
-        await mensOuterwear.clickMensTshirtsButton();
-  
-        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_tshirts');
-        
-      });
+      await expect(mensOuterwear.ladiesOuterwearButton).toBeVisible();
   
     });
   
-    test('Scenario: Ladies T-Shirts button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
-  
-      await test.step('AC: The button is visible', async () => {
+    await test.step('AC: The button is editable', async () => {
         
-        await expect(mensOuterwear.ladiesTshirtButton).toBeVisible();
-  
-      });
-  
-      await test.step('AC: The button is editable', async () => {
-        
-        await expect(mensOuterwear.ladiesTshirtButton).toBeEditable();
-  
-      });
-  
-      await test.step('AC: The button leads to correct URL', async() => {
-  
-        await mensOuterwear.clickLadiesTshirtsButton();
-  
-        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/ladies_tshirts');
-        
-      });
+      await expect(mensOuterwear.ladiesOuterwearButton).toBeEditable();
   
     });
+  
+    await test.step('AC: The button leads to correct URL', async() => {
+  
+      await mensOuterwear.clickLadiesOuterwearButton();
+  
+      await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/ladies_outerwear');
+        
+    });
+  
+  });
+  
+  test('Scenario: Men\'s T-Shirts button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+    await test.step('AC: The button is visible', async () => {
+        
+      await expect(mensOuterwear.mensTshirtButton).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The button is editable', async () => {
+        
+      await expect(mensOuterwear.mensTshirtButton).toBeEditable();
+  
+    });
+  
+    await test.step('AC: The button leads to correct URL', async() => {
+  
+      await mensOuterwear.clickMensTshirtsButton();
+  
+      await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_tshirts');
+        
+    });
+  
+  });
+  
+  test('Scenario: Ladies T-Shirts button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+    await test.step('AC: The button is visible', async () => {
+        
+      await expect(mensOuterwear.ladiesTshirtButton).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The button is editable', async () => {
+        
+      await expect(mensOuterwear.ladiesTshirtButton).toBeEditable();
+  
+    });
+  
+    await test.step('AC: The button leads to correct URL', async() => {
+  
+      await mensOuterwear.clickLadiesTshirtsButton();
+  
+      await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/ladies_tshirts');
+        
+    });
+  
+  });
     
-    test('Scenario: Main image is visible on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  test('Scenario: Main image is visible on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
   
-      await test.step('AC: The image is visible', async () => {
+    await test.step('AC: The image is visible', async () => {
         
-        await expect(mensOuterwear.mainImage).toBeVisible();
-  
-      });
-  
-      await test.step('AC: The image is editable', async () => {
-        
-        await expect(mensOuterwear.mainImage).toBeEditable();
-  
-      });
+      await expect(mensOuterwear.mainImage).toBeVisible();
   
     });
+  
+    await test.step('AC: The image is editable', async () => {
+        
+      await expect(mensOuterwear.mainImage).toBeEditable();
+  
+    });
+  
+  });
+
+  test('Scenario: Men\'s Outerwear header has correct text', async ({ mensOuterwear }) => {
+    
+    await test.step('AC: The heading is visible', async () => {
+
+      await expect(mensOuterwear.mensOuterwearHeader).toBeVisible();
+
+    });
+
+    await test.step('AC: Correct text is displayed - Men\'s Outerwear', async () => {
+
+      await expect(mensOuterwear.mensOuterwearHeader).toHaveText(/Men's Outerwear/);
+
+    });
+
+  });
+
+  test('Scenario: Items quantity has correct text', async ({ mensOuterwear }) => {
+
+    await test.step('AC: The text is visible', async () => {
+
+      await expect(mensOuterwear.itemsQuantityText).toBeVisible();
+
+    });
+
+    await test.step('AC: Correct text is displayed - (16 items)', async () => {
+
+      await expect(mensOuterwear.itemsQuantityText).toHaveText(/(16 items)/);
+
+    });
+
+  });
 
 });
