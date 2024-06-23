@@ -73,4 +73,101 @@ test.describe('Smoke Test - Men\'s Outerwear page', () => {
       });
       
     });
+
+    test('Scenario: Men\'s Outerwear button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+
+      await test.step('AC: The button is visible', async () => {
+        
+        await expect(mensOuterwear.mensOuterwearButton).toBeVisible();
+  
+      });
+  
+      await test.step('AC: The button is editable', async () => {
+        
+        await expect(mensOuterwear.mensOuterwearButton).toBeEditable();
+  
+      });
+  
+      await test.step('AC: The button leads to correct URL', async() => {
+  
+        await mensOuterwear.clickMensOuterwearButton();
+  
+        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
+        
+      });
+  
+    });
+  
+    test('Scenario: Ladies Outerwear button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+      await test.step('AC: The button is visible', async () => {
+        
+        await expect(mensOuterwear.ladiesOuterwearButton).toBeVisible();
+  
+      });
+  
+      await test.step('AC: The button is editable', async () => {
+        
+        await expect(mensOuterwear.ladiesOuterwearButton).toBeEditable();
+  
+      });
+  
+      await test.step('AC: The button leads to correct URL', async() => {
+  
+        await mensOuterwear.clickLadiesOuterwearButton();
+  
+        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/ladies_outerwear');
+        
+      });
+  
+    });
+  
+    test('Scenario: Men\'s T-Shirts button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+      await test.step('AC: The button is visible', async () => {
+        
+        await expect(mensOuterwear.mensTshirtButton).toBeVisible();
+  
+      });
+  
+      await test.step('AC: The button is editable', async () => {
+        
+        await expect(mensOuterwear.mensTshirtButton).toBeEditable();
+  
+      });
+  
+      await test.step('AC: The button leads to correct URL', async() => {
+  
+        await mensOuterwear.clickMensTshirtsButton();
+  
+        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_tshirts');
+        
+      });
+  
+    });
+  
+    test('Scenario: Ladies T-Shirts button is interactable on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+      await test.step('AC: The button is visible', async () => {
+        
+        await expect(mensOuterwear.ladiesTshirtButton).toBeVisible();
+  
+      });
+  
+      await test.step('AC: The button is editable', async () => {
+        
+        await expect(mensOuterwear.ladiesTshirtButton).toBeEditable();
+  
+      });
+  
+      await test.step('AC: The button leads to correct URL', async() => {
+  
+        await mensOuterwear.clickLadiesTshirtsButton();
+  
+        await expect(mensOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/ladies_tshirts');
+        
+      });
+  
+    });
+    
 });
