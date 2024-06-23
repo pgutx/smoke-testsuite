@@ -170,4 +170,20 @@ test.describe('Smoke Test - Men\'s Outerwear page', () => {
   
     });
     
+    test('Scenario: Main image is visible on the Men\'s Outerwear page', async ({ mensOuterwear }) => {
+  
+      await test.step('AC: The image is visible', async () => {
+        
+        await expect(mensOuterwear.mainImage).toBeVisible();
+  
+      });
+  
+      await test.step('AC: The image is editable', async () => {
+        
+        await expect(mensOuterwear.mainImage).toBeEditable();
+  
+      });
+  
+    });
+
 });
