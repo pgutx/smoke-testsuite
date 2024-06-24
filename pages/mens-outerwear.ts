@@ -12,6 +12,15 @@ export class MensOuterwear {
   readonly mainImage: Locator;
   readonly mensOuterwearHeader: Locator;
   readonly itemsQuantityText: Locator;
+  readonly firstItemLink: Locator;
+  readonly firstItemName: Locator;
+  readonly firstItemPrice: Locator;
+  readonly middleItemLink: Locator;
+  readonly middleItemName: Locator;
+  readonly middleItemPrice: Locator;
+  readonly lastItemLink: Locator;
+  readonly lastItemName: Locator;
+  readonly lastItemPrice: Locator;
 
     constructor(page: Page){
         this.page = page;
@@ -24,6 +33,15 @@ export class MensOuterwear {
         this.mainImage = page.getByRole('img', { name: 'Men\'s Outerwear' });
         this.mensOuterwearHeader = page.getByRole('heading', { name: 'Men\'s Outerwear ' });
         this.itemsQuantityText = page.getByText('(16 items)');
+        this.firstItemLink = page.getByRole('link', { name: 'Men\'s Tech Shell Full-Zip Men' });
+        this.firstItemName = page.getByText('Men\'s Tech Shell Full-Zip');
+        this.firstItemPrice = page.getByRole('link', { name: 'Men\'s Tech Shell Full-Zip Men' }).getByText('$50.20');
+        this.middleItemLink = page.getByRole('link', { name: 'Recycled Plastic Bottle' });
+        this.middleItemName = page.getByText('Recycled Plastic Bottle Hoodie - Green');
+        this.middleItemPrice = page.getByRole('link', { name: 'Recycled Plastic Bottle' }).getByText('$60.95');
+        this.lastItemLink = page.getByRole('link', { name: 'YouTube Unisex Flex Fleece' });
+        this.lastItemName = page.getByText('YouTube Unisex Flex Fleece Zip Hoodie');
+        this.lastItemPrice = page.getByRole('link', { name: 'YouTube Unisex Flex Fleece' }).getByText('$45.25');
     }
 
     async goToMensOuterwearPage() {
@@ -52,5 +70,17 @@ export class MensOuterwear {
   
     async clickLadiesTshirtsButton() {
         await this.ladiesTshirtButton.click();
+    }
+
+    async clickFirstProductLink() {
+        await this.firstItemLink.click();
+    }
+
+    async clickMiddleProductLink() {
+        await this.middleItemLink.click();
+    }
+
+    async clickLastProductLink() {
+        await this.lastItemLink.click();
     }
 };
