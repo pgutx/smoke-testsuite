@@ -1,4 +1,3 @@
-import { MensOuterwear } from '../pages/mens-outerwear';
 import { test, expect } from '../utilities/fixtures';
 
 test.beforeEach(async ({ mensOuterwear }) => {
