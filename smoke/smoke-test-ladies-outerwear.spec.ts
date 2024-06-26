@@ -26,4 +26,148 @@ test.describe('Smoke test Ladies Outerwear page', () => {
     
   });
 
+  test('Scenario: SHOP button is interactable on the Ladies Outerwear page', async ({ ladiesOuterwear }) => {
+
+    await test.step('AC: The button is visible', async () => {
+  
+      await expect(ladiesOuterwear.shopButton).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The button is enabled', async () => {
+  
+      await expect(ladiesOuterwear.shopButton).toBeEnabled();
+  
+    });
+  
+    await test.step('AC: The button leads to correct URL', async() =>{
+  
+      await ladiesOuterwear.clickShopButton();
+  
+      await expect(ladiesOuterwear.page).toHaveURL('https://shop.polymer-project.org/');
+        
+    });
+  
+  });
+  
+  test('Scenario: Cart button is interactable on the Ladies Outerwear page', async ({ ladiesOuterwear }) => {
+  
+    await test.step('AC: The button is visible', async () => {
+  
+      await expect(ladiesOuterwear.cartButton).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The button is enabled', async () => {
+  
+      await expect(ladiesOuterwear.cartButton).toBeEnabled();
+  
+    });
+  
+    await test.step('AC: The button leads to correct URL', async() => {
+  
+      await ladiesOuterwear.clickCartButton();
+  
+      await expect(ladiesOuterwear.page).toHaveURL('https://shop.polymer-project.org/cart');
+        
+    });
+      
+  });
+
+  test('Scenario: Men\'s Outerwear button is interactable on the Ladies Outerwear page', async ({ ladiesOuterwear }) => {
+
+    await test.step('AC: The button is visible', async () => {
+        
+      await expect(ladiesOuterwear.mensOuterwearButton).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The button is editable', async () => {
+        
+      await expect(ladiesOuterwear.mensOuterwearButton).toBeEditable();
+  
+    });
+  
+    await test.step('AC: The button leads to correct URL', async() => {
+  
+      await ladiesOuterwear.clickMensOuterwearButton();
+  
+      await expect(ladiesOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_outerwear');
+        
+    });
+  
+  });
+  
+  test('Scenario: Ladies Outerwear button is interactable on the Ladies Outerwear page', async ({ ladiesOuterwear }) => {
+  
+    await test.step('AC: The button is visible', async () => {
+        
+      await expect(ladiesOuterwear.ladiesOuterwearButton).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The button is editable', async () => {
+        
+      await expect(ladiesOuterwear.ladiesOuterwearButton).toBeEditable();
+  
+    });
+  
+    await test.step('AC: The button leads to correct URL', async() => {
+  
+      await ladiesOuterwear.clickLadiesOuterwearButton();
+  
+      await expect(ladiesOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/ladies_outerwear');
+        
+    });
+  
+  });
+  
+  test('Scenario: Men\'s T-Shirts button is interactable on the Ladies Outerwear page', async ({ ladiesOuterwear }) => {
+  
+    await test.step('AC: The button is visible', async () => {
+        
+      await expect(ladiesOuterwear.mensTshirtButton).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The button is editable', async () => {
+        
+      await expect(ladiesOuterwear.mensTshirtButton).toBeEditable();
+  
+    });
+  
+    await test.step('AC: The button leads to correct URL', async() => {
+  
+      await ladiesOuterwear.clickMensTshirtsButton();
+  
+      await expect(ladiesOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/mens_tshirts');
+        
+    });
+  
+  });
+  
+  test('Scenario: Ladies T-Shirts button is interactable on the Ladies Outerwear page', async ({ ladiesOuterwear }) => {
+  
+    await test.step('AC: The button is visible', async () => {
+        
+      await expect(ladiesOuterwear.ladiesTshirtButton).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The button is editable', async () => {
+        
+      await expect(ladiesOuterwear.ladiesTshirtButton).toBeEditable();
+  
+    });
+  
+    await test.step('AC: The button leads to correct URL', async() => {
+  
+      await ladiesOuterwear.clickLadiesTshirtsButton();
+  
+      await expect(ladiesOuterwear.page).toHaveURL('https://shop.polymer-project.org/list/ladies_tshirts');
+        
+    });
+  
+  });
+
 });
