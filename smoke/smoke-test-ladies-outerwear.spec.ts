@@ -1,7 +1,7 @@
 import { test, expect } from '../utilities/fixtures';
 
 test.beforeEach(async ({ ladiesOuterwear }) => {
-    await ladiesOuterwear.goToLadiesOuterwearPage();
+  await ladiesOuterwear.goToLadiesOuterwearPage();
 });
 
 test.describe('Smoke test Ladies Outerwear page', () => {
@@ -168,6 +168,54 @@ test.describe('Smoke test Ladies Outerwear page', () => {
         
     });
   
+  });
+
+  test('Scenario: Main image is visible on the Ladies Outerwear page', async ({ ladiesOuterwear }) => {
+  
+    await test.step('AC: The image is visible', async () => {
+        
+      await expect(ladiesOuterwear.mainImage).toBeVisible();
+  
+    });
+  
+    await test.step('AC: The image is editable', async () => {
+        
+      await expect(ladiesOuterwear.mainImage).toBeEditable();
+  
+    });
+  
+  });
+
+  test('Scenario: Ladies Outerwear header has correct text', async ({ ladiesOuterwear }) => {
+    
+    await test.step('AC: The heading is visible', async () => {
+
+      await expect(ladiesOuterwear.ladiesOuterwearHeader).toBeVisible();
+
+    });
+
+    await test.step('AC: Correct text is displayed - Ladies Outerwear', async () => {
+
+      await expect(ladiesOuterwear.ladiesOuterwearHeader).toHaveText(/Ladies Outerwear/);
+
+    });
+
+  });
+
+  test('Scenario: Items quantity has correct text', async ({ ladiesOuterwear }) => {
+
+    await test.step('AC: The text is visible', async () => {
+
+      await expect(ladiesOuterwear.itemsQuantityText).toBeVisible();
+
+    });
+
+    await test.step('AC: Correct text is displayed - (6 items)', async () => {
+
+      await expect(ladiesOuterwear.itemsQuantityText).toHaveText(/(6 items)/);
+
+    });
+
   });
 
 });

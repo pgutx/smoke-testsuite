@@ -9,6 +9,9 @@ export class LadiesOuterwear {
   readonly ladiesOuterwearButton: Locator;
   readonly mensTshirtButton: Locator;
   readonly ladiesTshirtButton: Locator;
+  readonly mainImage: Locator;
+  readonly ladiesOuterwearHeader: Locator;
+  readonly itemsQuantityText: Locator;
 
   constructor (page: Page){
       this.page = page;
@@ -18,6 +21,9 @@ export class LadiesOuterwear {
       this.ladiesOuterwearButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies Outerwear' });
       this.mensTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Men\'s T-Shirts' });
       this.ladiesTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies T-Shirts' });
+      this.mainImage = page.getByRole('link', { name: 'Ladies Outerwear' });
+      this.ladiesOuterwearHeader = page.getByRole('heading', {name: 'Ladies Outerwear' });
+      this.itemsQuantityText = page.getByText('(6 items)');
   }
 
   async goToLadiesOuterwearPage() {

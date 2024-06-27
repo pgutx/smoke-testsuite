@@ -1,7 +1,7 @@
 import { test, expect } from '../utilities/fixtures';
 
 test.beforeEach(async ({ mensOuterwear }) => {
-    await mensOuterwear.goToMensOuterwearPage();
+  await mensOuterwear.goToMensOuterwearPage();
 });
 
 test.describe('Smoke Test - Men\'s Outerwear page', () => {
