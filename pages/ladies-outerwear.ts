@@ -12,6 +12,15 @@ export class LadiesOuterwear {
   readonly mainImage: Locator;
   readonly ladiesOuterwearHeader: Locator;
   readonly itemsQuantityText: Locator;
+  readonly firstItemLink: Locator;
+  readonly firstItemName: Locator;
+  readonly firstItemPrice: Locator;
+  readonly middleItemLink: Locator;
+  readonly middleItemName: Locator;
+  readonly middleItemPrice: Locator;
+  readonly lastItemLink: Locator;
+  readonly lastItemName: Locator;
+  readonly lastItemPrice: Locator;
 
   constructor (page: Page){
       this.page = page;
@@ -24,6 +33,12 @@ export class LadiesOuterwear {
       this.mainImage = page.getByRole('link', { name: 'Ladies Outerwear' });
       this.ladiesOuterwearHeader = page.getByRole('heading', {name: 'Ladies Outerwear' });
       this.itemsQuantityText = page.getByText('(6 items)');
+      this.firstItemLink = page.getByRole('link', { name: 'Ladies Modern Stretch Full' });
+      this.firstItemName = page.getByText('Ladies Modern Stretch Full Zip');
+      this.firstItemPrice = page.getByRole('link', { name: 'Ladies Modern Stretch Full' }).getByText('$41.60');
+      this.lastItemLink = page.getByRole('link', { name: 'Ladies Yerba Knit Quarter Zip' });
+      this.lastItemName = page.getByText('Ladies Yerba Knit Quarter Zip');
+      this.lastItemPrice = page.getByRole('link', { name: 'Ladies Yerba Knit Quarter Zip' }).getByText('$64.20');
   }
 
   async goToLadiesOuterwearPage() {
@@ -52,6 +67,14 @@ export class LadiesOuterwear {
 
   async clickLadiesTshirtsButton() {
     await this.ladiesTshirtButton.click();
+  }
+
+  async clickFirstProductLink() {
+    await this.firstItemLink.click();
+  }
+
+  async clickLastProductLink() {
+    await this.lastItemLink.click();
   }
 
 };
