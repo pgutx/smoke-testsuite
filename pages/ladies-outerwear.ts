@@ -22,7 +22,7 @@ export class LadiesOuterwear {
   readonly lastItemName: Locator;
   readonly lastItemPrice: Locator;
 
-  constructor (page: Page){
+    constructor (page: Page){
       this.page = page;
       this.shopButton = page.getByLabel('SHOP Home');
       this.cartButton = page.getByLabel('Shopping cart: 0 items');
@@ -39,7 +39,7 @@ export class LadiesOuterwear {
       this.lastItemLink = page.getByRole('link', { name: 'Ladies Yerba Knit Quarter Zip' });
       this.lastItemName = page.getByText('Ladies Yerba Knit Quarter Zip');
       this.lastItemPrice = page.getByRole('link', { name: 'Ladies Yerba Knit Quarter Zip' }).getByText('$64.20');
-  }
+    }
 
   async goToLadiesOuterwearPage() {
     await this.page.goto('https://shop.polymer-project.org/list/ladies_outerwear');

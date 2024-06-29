@@ -23,25 +23,25 @@ export class MensOuterwear {
   readonly lastItemPrice: Locator;
 
     constructor(page: Page){
-        this.page = page;
-        this.shopButton = page.getByLabel('SHOP Home');
-        this.cartButton = page.getByLabel('Shopping cart: 0 items');
-        this.mensOuterwearButton = page.locator('#tabContainer').getByRole('link', { name: 'Men\'s Outerwear' });
-        this.ladiesOuterwearButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies Outerwear' });
-        this.mensTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Men\'s T-Shirts' });
-        this.ladiesTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies T-Shirts' });
-        this.mainImage = page.getByRole('img', { name: 'Men\'s Outerwear' });
-        this.mensOuterwearHeader = page.getByRole('heading', { name: 'Men\'s Outerwear ' });
-        this.itemsQuantityText = page.getByText('(16 items)');
-        this.firstItemLink = page.getByRole('link', { name: 'Men\'s Tech Shell Full-Zip Men' });
-        this.firstItemName = page.getByText('Men\'s Tech Shell Full-Zip');
-        this.firstItemPrice = page.getByRole('link', { name: 'Men\'s Tech Shell Full-Zip Men' }).getByText('$50.20');
-        this.middleItemLink = page.getByRole('link', { name: 'Recycled Plastic Bottle' });
-        this.middleItemName = page.getByText('Recycled Plastic Bottle Hoodie - Green');
-        this.middleItemPrice = page.getByRole('link', { name: 'Recycled Plastic Bottle' }).getByText('$60.95');
-        this.lastItemLink = page.getByRole('link', { name: 'YouTube Unisex Flex Fleece' });
-        this.lastItemName = page.getByText('YouTube Unisex Flex Fleece Zip Hoodie');
-        this.lastItemPrice = page.getByRole('link', { name: 'YouTube Unisex Flex Fleece' }).getByText('$45.25');
+      this.page = page;
+      this.shopButton = page.getByLabel('SHOP Home');
+      this.cartButton = page.getByLabel('Shopping cart: 0 items');
+      this.mensOuterwearButton = page.locator('#tabContainer').getByRole('link', { name: 'Men\'s Outerwear' });
+      this.ladiesOuterwearButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies Outerwear' });
+      this.mensTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Men\'s T-Shirts' });
+      this.ladiesTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies T-Shirts' });
+      this.mainImage = page.getByRole('img', { name: 'Men\'s Outerwear' });
+      this.mensOuterwearHeader = page.getByRole('heading', { name: 'Men\'s Outerwear' });
+      this.itemsQuantityText = page.getByText('(16 items)');
+      this.firstItemLink = page.getByRole('link', { name: 'Men\'s Tech Shell Full-Zip Men' });
+      this.firstItemName = page.getByText('Men\'s Tech Shell Full-Zip');
+      this.firstItemPrice = page.getByRole('link', { name: 'Men\'s Tech Shell Full-Zip Men' }).getByText('$50.20');
+      this.middleItemLink = page.getByRole('link', { name: 'Recycled Plastic Bottle' });
+      this.middleItemName = page.getByText('Recycled Plastic Bottle Hoodie - Green');
+      this.middleItemPrice = page.getByRole('link', { name: 'Recycled Plastic Bottle' }).getByText('$60.95');
+      this.lastItemLink = page.getByRole('link', { name: 'YouTube Unisex Flex Fleece' });
+      this.lastItemName = page.getByText('YouTube Unisex Flex Fleece Zip Hoodie');
+      this.lastItemPrice = page.getByRole('link', { name: 'YouTube Unisex Flex Fleece' }).getByText('$45.25');
     }
 
     async goToMensOuterwearPage() {
