@@ -1,10 +1,10 @@
 import { test, expect } from '../utilities/fixtures';
 
 test.beforeEach(async ({ mensTshirts }) => {
-    await mensTshirts.goToMensTshirtsPage();
+  await mensTshirts.goToMensTshirtsPage();
 });
 
-test.describe('Smoke test Men\'s T-Shirts page', () => {
+test.describe('Smoke Test - Men\'s T-Shirts page', () => {
 
   test('Scenario: User sees the correct URL', async({ mensTshirts }) => {
 
@@ -26,7 +26,7 @@ test.describe('Smoke test Men\'s T-Shirts page', () => {
 
   });
 
-  test('Scenario: SHOP button is interactable on the Men\'s Outerwear page', async ({ mensTshirts }) => {
+  test('Scenario: SHOP button is interactable on the Men\'s T-Shirts page', async ({ mensTshirts }) => {
 
     await test.step('AC: The button is visible', async () => {
 
@@ -50,7 +50,7 @@ test.describe('Smoke test Men\'s T-Shirts page', () => {
 
   });
 
-  test('Scenario: Cart button is interactable on the Men\'s Outerwear page', async ({ mensTshirts }) => {
+  test('Scenario: Cart button is interactable on the Men\'s T-Shirts page', async ({ mensTshirts }) => {
 
     await test.step('AC: The button is visible', async () => {
 
@@ -74,7 +74,7 @@ test.describe('Smoke test Men\'s T-Shirts page', () => {
 
   });
 
-  test('Scenario: Men\'s Outerwear button is interactable on the Men\'s Outerwear page', async ({ mensTshirts }) => {
+  test('Scenario: Men\'s Outerwear button is interactable on the Men\'s T-Shirts page', async ({ mensTshirts }) => {
 
     await test.step('AC: The button is visible', async () => {
 
@@ -98,7 +98,7 @@ test.describe('Smoke test Men\'s T-Shirts page', () => {
 
   });
 
-  test('Scenario: Ladies Outerwear button is interactable on the Men\'s Outerwear page', async ({ mensTshirts }) => {
+  test('Scenario: Ladies Outerwear button is interactable on the Men\'s T-Shirts page', async ({ mensTshirts }) => {
 
     await test.step('AC: The button is visible', async () => {
 
@@ -122,7 +122,7 @@ test.describe('Smoke test Men\'s T-Shirts page', () => {
 
   });
 
-  test('Scenario: Men\'s T-Shirts button is interactable on the Men\'s Outerwear page', async ({ mensTshirts }) => {
+  test('Scenario: Men\'s T-Shirts button is interactable on the Men\'s T-Shirts page', async ({ mensTshirts }) => {
 
     await test.step('AC: The button is visible', async () => {
 
@@ -146,7 +146,7 @@ test.describe('Smoke test Men\'s T-Shirts page', () => {
 
   });
 
-  test('Scenario: Ladies T-Shirts button is interactable on the Men\'s Outerwear page', async ({ mensTshirts }) => {
+  test('Scenario: Ladies T-Shirts button is interactable on the Men\'s T-Shirts page', async ({ mensTshirts }) => {
 
     await test.step('AC: The button is visible', async () => {
 
@@ -170,7 +170,7 @@ test.describe('Smoke test Men\'s T-Shirts page', () => {
 
   });
 
-  test('Scenario: Main image is visible on the Men\'s Outerwear page', async ({ mensTshirts }) => {
+  test('Scenario: Main image is visible on the Men\'s T-Shirts page', async ({ mensTshirts }) => {
 
     await test.step('AC: The image is visible', async () => {
 

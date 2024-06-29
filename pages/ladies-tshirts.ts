@@ -1,7 +1,7 @@
 import { type Locator, type Page } from '@playwright/test';
 
-export class MensOuterwear {
-
+export class LadiesTshirts {
+    
   readonly page: Page;
   readonly shopButton: Locator;
   readonly cartButton: Locator;
@@ -10,7 +10,7 @@ export class MensOuterwear {
   readonly mensTshirtButton: Locator;
   readonly ladiesTshirtButton: Locator;
   readonly mainImage: Locator;
-  readonly mensOuterwearHeader: Locator;
+  readonly ladiesTshirtsHeader: Locator;
   readonly itemsQuantityText: Locator;
   readonly firstItemLink: Locator;
   readonly firstItemName: Locator;
@@ -30,22 +30,22 @@ export class MensOuterwear {
       this.ladiesOuterwearButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies Outerwear' });
       this.mensTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Men\'s T-Shirts' });
       this.ladiesTshirtButton = page.locator('#tabContainer').getByRole('link', { name: 'Ladies T-Shirts' });
-      this.mainImage = page.getByRole('img', { name: 'Men\'s Outerwear' });
-      this.mensOuterwearHeader = page.getByRole('heading', { name: 'Men\'s Outerwear' });
-      this.itemsQuantityText = page.getByText('(16 items)');
-      this.firstItemLink = page.getByRole('link', { name: 'Men\'s Tech Shell Full-Zip Men' });
-      this.firstItemName = page.getByText('Men\'s Tech Shell Full-Zip');
-      this.firstItemPrice = page.getByRole('link', { name: 'Men\'s Tech Shell Full-Zip Men' }).getByText('$50.20');
-      this.middleItemLink = page.getByRole('link', { name: 'Recycled Plastic Bottle' });
-      this.middleItemName = page.getByText('Recycled Plastic Bottle Hoodie - Green');
-      this.middleItemPrice = page.getByRole('link', { name: 'Recycled Plastic Bottle' }).getByText('$60.95');
-      this.lastItemLink = page.getByRole('link', { name: 'YouTube Unisex Flex Fleece' });
-      this.lastItemName = page.getByText('YouTube Unisex Flex Fleece Zip Hoodie');
-      this.lastItemPrice = page.getByRole('link', { name: 'YouTube Unisex Flex Fleece' }).getByText('$45.25');
+      this.mainImage = page.getByRole('img', { name: 'Ladies T-Shirts' });
+      this.ladiesTshirtsHeader = page.getByRole('heading', { name: 'Ladies T-Shirts' });
+      this.itemsQuantityText = page.getByText('(19 items)');
+      this.firstItemLink = page.getByRole('link', { name: 'Ladies Chrome T-Shirt Ladies' });
+      this.firstItemName = page.getByText('Ladies Chrome T-Shirt');
+      this.firstItemPrice = page.getByRole('link', { name: 'Ladies Chrome T-Shirt Ladies' }).getByText('$13.30');
+      this.middleItemLink = page.getByRole('link', { name: 'Bella Scoop-Neck Ladies T-' });
+      this.middleItemName = page.getByText('Bella Scoop-Neck Ladies T-Shirt');
+      this.middleItemPrice = page.getByRole('link', { name: 'Bella Scoop-Neck Ladies T-' }).getByText('$13.10');
+      this.lastItemLink = page.getByRole('link', { name: 'Women\'s Android Heart T-Shirt' });
+      this.lastItemName = page.getByText('Women\'s Android Heart T-Shirt');
+      this.lastItemPrice = page.getByRole('link', { name: 'Women\'s Android Heart T-Shirt' }).getByText('$10.60');
     }
 
-    async goToMensOuterwearPage() {
-      await this.page.goto('https://shop.polymer-project.org/list/mens_outerwear');
+    async goToLadiesTshirtsPage() {
+      await this.page.goto('https://shop.polymer-project.org/list/ladies_tshirts');
     }
 
     async clickShopButton() {
@@ -83,4 +83,5 @@ export class MensOuterwear {
     async clickLastProductLink() {
       await this.lastItemLink.click();
     }
-};
+
+}

@@ -4,7 +4,7 @@ test.beforeEach(async ({ ladiesOuterwear }) => {
   await ladiesOuterwear.goToLadiesOuterwearPage();
 });
 
-test.describe('Smoke test Ladies Outerwear page', () => {
+test.describe('Smoke Test - Ladies Outerwear page', () => {
 
   test('Scenario: User sees the correct URL', async({ ladiesOuterwear }) => {
   
