@@ -1,4 +1,4 @@
-import { test as base } from '@playwright/test';
+import { test as base, Page } from '@playwright/test';
 import { HomePage } from '../pages/homepage';
 import { MensOuterwear } from '../pages/mens-outerwear';
 import { LadiesOuterwear } from '../pages/ladies-outerwear';
@@ -14,6 +14,7 @@ type pageFixtures = {
     ladiesTshirts: LadiesTshirts;
     productPage: ProductPage;
   }
+
 
 export const test = base.extend<pageFixtures>({
   
@@ -35,6 +36,7 @@ export const test = base.extend<pageFixtures>({
   productPage: async({ page }, use) =>{
     await use(new ProductPage(page));
   },
+
 });
   
 export { expect } from '@playwright/test';
