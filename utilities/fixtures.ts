@@ -6,6 +6,7 @@ import { MensTshirts } from '../pages/mens-tshirts';
 import { LadiesTshirts } from '../pages/ladies-tshirts';
 import { ProductPage } from '../pages/product';
 import { EmptyCart } from '../pages/empty-cart';
+import { PopulatedCart } from '../pages/populated-cart';
 
 type pageFixtures = {
     homePage: HomePage;
@@ -15,8 +16,8 @@ type pageFixtures = {
     ladiesTshirts: LadiesTshirts;
     productPage: ProductPage;
     emptyCart: EmptyCart;
+    populatedCart: PopulatedCart;
   }
-
 
 export const test = base.extend<pageFixtures>({
   
@@ -40,7 +41,17 @@ export const test = base.extend<pageFixtures>({
   },
   emptyCart: async({ page }, use) => {
     await use(new EmptyCart(page));
-  }
+  },
+  populatedCart: async({ page, productPage }, use) => {
+
+    await productPage.goToProductPage();
+
+    await productPage.clickAddToCartButton();
+
+    await productPage.clickViewCartButton();
+
+    await use(new PopulatedCart(page));
+  },
 
 });
   
