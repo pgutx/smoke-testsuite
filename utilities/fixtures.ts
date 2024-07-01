@@ -1,10 +1,11 @@
-import { test as base, Page } from '@playwright/test';
+import { test as base } from '@playwright/test';
 import { HomePage } from '../pages/homepage';
 import { MensOuterwear } from '../pages/mens-outerwear';
 import { LadiesOuterwear } from '../pages/ladies-outerwear';
 import { MensTshirts } from '../pages/mens-tshirts';
 import { LadiesTshirts } from '../pages/ladies-tshirts';
 import { ProductPage } from '../pages/product';
+import { EmptyCart } from '../pages/empty-cart';
 
 type pageFixtures = {
     homePage: HomePage;
@@ -13,6 +14,7 @@ type pageFixtures = {
     mensTshirts: MensTshirts;
     ladiesTshirts: LadiesTshirts;
     productPage: ProductPage;
+    emptyCart: EmptyCart;
   }
 
 
@@ -27,15 +29,18 @@ export const test = base.extend<pageFixtures>({
   ladiesOuterwear: async({ page }, use) => {
     await use(new LadiesOuterwear(page));
   },
-  mensTshirts: async({ page }, use) =>{
+  mensTshirts: async({ page }, use) => {
     await use(new MensTshirts(page));
   },
-  ladiesTshirts: async({ page }, use) =>{
+  ladiesTshirts: async({ page }, use) => {
     await use(new LadiesTshirts(page));
   },
-  productPage: async({ page }, use) =>{
+  productPage: async({ page }, use) => {
     await use(new ProductPage(page));
   },
+  emptyCart: async({ page }, use) => {
+    await use(new EmptyCart(page));
+  }
 
 });
   
