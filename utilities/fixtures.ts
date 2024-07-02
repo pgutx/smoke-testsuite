@@ -7,6 +7,7 @@ import { LadiesTshirts } from '../pages/ladies-tshirts';
 import { ProductPage } from '../pages/product';
 import { EmptyCart } from '../pages/empty-cart';
 import { PopulatedCart } from '../pages/populated-cart';
+import { Checkout } from '../pages/checkout';
 
 type pageFixtures = {
     homePage: HomePage;
@@ -17,6 +18,7 @@ type pageFixtures = {
     productPage: ProductPage;
     emptyCart: EmptyCart;
     populatedCart: PopulatedCart;
+    checkoutPage: Checkout;
   }
 
 export const test = base.extend<pageFixtures>({
@@ -42,7 +44,7 @@ export const test = base.extend<pageFixtures>({
   emptyCart: async({ page }, use) => {
     await use(new EmptyCart(page));
   },
-  populatedCart: async({ page, productPage, mensOuterwear }, use) => {
+  populatedCart: async({ page, mensOuterwear, productPage }, use) => {
 
     await mensOuterwear.goToMensOuterwearPage();
 
@@ -55,6 +57,20 @@ export const test = base.extend<pageFixtures>({
     await productPage.clickViewCartButton();
 
     await use(new PopulatedCart(page));
+  },
+  checkoutPage: async({ page, mensOuterwear, productPage }, use) => {
+
+    await mensOuterwear.goToMensOuterwearPage();
+
+    await mensOuterwear.clickFirstProductLink();
+
+    await productPage.clickAddToCartButton();
+
+    await expect.soft(productPage.dialogPopup).toBeVisible();
+
+    await productPage.clickCheckoutButton();
+
+    await use(new Checkout(page));
   },
 
 });
