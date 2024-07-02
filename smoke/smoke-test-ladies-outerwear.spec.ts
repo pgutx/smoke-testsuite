@@ -82,9 +82,9 @@ test.describe('Smoke Test - Ladies Outerwear page', () => {
   
     });
   
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
         
-      await expect(ladiesOuterwear.mensOuterwearButton).toBeEditable();
+      await expect(ladiesOuterwear.mensOuterwearButton).toBeEnabled();
   
     });
   
@@ -106,9 +106,9 @@ test.describe('Smoke Test - Ladies Outerwear page', () => {
   
     });
   
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
         
-      await expect(ladiesOuterwear.ladiesOuterwearButton).toBeEditable();
+      await expect(ladiesOuterwear.ladiesOuterwearButton).toBeEnabled();
   
     });
   
@@ -130,9 +130,9 @@ test.describe('Smoke Test - Ladies Outerwear page', () => {
   
     });
   
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
         
-      await expect(ladiesOuterwear.mensTshirtButton).toBeEditable();
+      await expect(ladiesOuterwear.mensTshirtButton).toBeEnabled();
   
     });
   
@@ -154,9 +154,9 @@ test.describe('Smoke Test - Ladies Outerwear page', () => {
   
     });
   
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
         
-      await expect(ladiesOuterwear.ladiesTshirtButton).toBeEditable();
+      await expect(ladiesOuterwear.ladiesTshirtButton).toBeEnabled();
   
     });
   
@@ -175,12 +175,6 @@ test.describe('Smoke Test - Ladies Outerwear page', () => {
     await test.step('AC: The image is visible', async () => {
         
       await expect(ladiesOuterwear.mainImage).toBeVisible();
-  
-    });
-  
-    await test.step('AC: The image is editable', async () => {
-        
-      await expect(ladiesOuterwear.mainImage).toBeEditable();
   
     });
   
@@ -226,9 +220,9 @@ test.describe('Smoke Test - Ladies Outerwear page', () => {
 
     });
 
-    await test.step('AC: The product link is editable', async () =>{
+    await test.step('AC: The product link is enabled', async () =>{
 
-      await expect(ladiesOuterwear.firstItemLink).toBeEditable();
+      await expect(ladiesOuterwear.firstItemLink).toBeEnabled();
 
     });
 
@@ -282,9 +276,9 @@ test.describe('Smoke Test - Ladies Outerwear page', () => {
 
     });
 
-    await test.step('AC: The product link is editable', async () =>{
+    await test.step('AC: The product link is enabled', async () =>{
 
-      await expect(ladiesOuterwear.lastItemLink).toBeEditable();
+      await expect(ladiesOuterwear.lastItemLink).toBeEnabled();
 
     });
 

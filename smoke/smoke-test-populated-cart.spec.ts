@@ -108,9 +108,9 @@ test.describe('Smoke Test - Populated cart', () => {
       
     });
 
-    await test.step('AC: The image is editable', async () => {
+    await test.step('AC: The image is enabled', async () => {
 
-      await expect(populatedCart.itemImage).toBeEditable();
+      await expect(populatedCart.itemImage).toBeEnabled();
         
     });
 
@@ -132,9 +132,9 @@ test.describe('Smoke Test - Populated cart', () => {
       
     });
 
-    await test.step('AC: The name is editable', async () => {
+    await test.step('AC: The name is enabled', async () => {
 
-      await expect(populatedCart.itemName).toBeEditable();
+      await expect(populatedCart.itemName).toBeEnabled();
         
     });
 
@@ -156,9 +156,9 @@ test.describe('Smoke Test - Populated cart', () => {
 
     });
 
-    await test.step('AC: Size option is editable', async () => {
+    await test.step('AC: Size option is enabled', async () => {
 
-      await expect(populatedCart.quantitySelect).toBeEditable();
+      await expect(populatedCart.quantitySelect).toBeEnabled();
 
     });
 
@@ -288,9 +288,9 @@ test.describe('Smoke Test - Populated cart', () => {
       
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(populatedCart.deleteItemButton).toBeEditable();
+      await expect(populatedCart.deleteItemButton).toBeEnabled();
         
     });
 
@@ -310,12 +310,6 @@ test.describe('Smoke Test - Populated cart', () => {
 
       await expect(populatedCart.totalPriceField).toBeVisible();
 
-    });
-
-    await test.step('AC: The field is editable', async () =>{
-
-      await expect(populatedCart.totalPriceField).toBeEditable();
-  
     });
 
     await test.step('AC: The field is updated accordingly - 4 items', async () =>{
@@ -344,9 +338,9 @@ test.describe('Smoke Test - Populated cart', () => {
       
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(populatedCart.checkoutButton).toBeEditable();
+      await expect(populatedCart.checkoutButton).toBeEnabled();
         
     });
 

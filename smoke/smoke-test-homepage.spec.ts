@@ -82,9 +82,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
       
-      await expect(homePage.mensOuterwearButton).toBeEditable();
+      await expect(homePage.mensOuterwearButton).toBeEnabled();
 
     });
 
@@ -106,9 +106,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
       
-      await expect(homePage.ladiesOuterwearButton).toBeEditable();
+      await expect(homePage.ladiesOuterwearButton).toBeEnabled();
 
     });
 
@@ -130,9 +130,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
       
-      await expect(homePage.mensTshirtButton).toBeEditable();
+      await expect(homePage.mensTshirtButton).toBeEnabled();
 
     });
 
@@ -154,9 +154,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
       
-      await expect(homePage.ladiesTshirtButton).toBeEditable();
+      await expect(homePage.ladiesTshirtButton).toBeEnabled();
 
     });
 
@@ -178,9 +178,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The image link is editable', async () => {
+    await test.step('AC: The image link is enabled', async () => {
       
-      await expect(homePage.mensOuterwearImageLink).toBeEditable();
+      await expect(homePage.mensOuterwearImageLink).toBeEnabled();
 
     });
 
@@ -202,9 +202,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The image link is editable', async () => {
+    await test.step('AC: The image link is enabled', async () => {
       
-      await expect(homePage.ladiesOuterwearImageLink).toBeEditable();
+      await expect(homePage.ladiesOuterwearImageLink).toBeEnabled();
 
     });
 
@@ -226,9 +226,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The image link is editable', async () => {
+    await test.step('AC: The image link is enabled', async () => {
       
-      await expect(homePage.mensTshirtImageLink).toBeEditable();
+      await expect(homePage.mensTshirtImageLink).toBeEnabled();
 
     });
 
@@ -250,9 +250,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The image link is editable', async () => {
+    await test.step('AC: The image link is enabled', async () => {
       
-      await expect(homePage.ladiesTshirtImageLink).toBeEditable();
+      await expect(homePage.ladiesTshirtImageLink).toBeEnabled();
 
     });
 
@@ -274,9 +274,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
       
-      await expect(homePage.mensOuterwearShopButton).toBeEditable();
+      await expect(homePage.mensOuterwearShopButton).toBeEnabled();
 
     });
 
@@ -298,9 +298,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
       
-      await expect(homePage.ladiesOuterwearShopButton).toBeEditable();
+      await expect(homePage.ladiesOuterwearShopButton).toBeEnabled();
 
     });
 
@@ -322,9 +322,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
       
-      await expect(homePage.mensTshirtsShopButton).toBeEditable();
+      await expect(homePage.mensTshirtsShopButton).toBeEnabled();
 
     });
 
@@ -346,9 +346,9 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
       
-      await expect(homePage.ladiesTshirtsShopButton).toBeEditable();
+      await expect(homePage.ladiesTshirtsShopButton).toBeEnabled();
 
     });
 
@@ -434,12 +434,6 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The image is enabled', async () => {
-
-      await expect(homePage.mensOuterwearImage).toBeEnabled();
-
-    });
-
   });
 
   test('Scenario: Ladies Outerwear image is visible on the homepage', async ({ homePage }) => {
@@ -447,12 +441,6 @@ test.describe('Smoke Test - Homepage', () => {
     await test.step('AC: The image is visible', async () => {
 
       await expect(homePage.ladiesOuterwearImage).toBeVisible();
-
-    });
-
-    await test.step('AC: The image is enabled', async () => {
-
-      await expect(homePage.ladiesOuterwearImage).toBeEnabled();
 
     });
 
@@ -466,12 +454,6 @@ test.describe('Smoke Test - Homepage', () => {
 
     });
 
-    await test.step('AC: The image is enabled', async () => {
-
-      await expect(homePage.mensTshirtsImage).toBeEnabled();
-
-    });
-
   });
 
   test('Scenario: Ladies T-Shirts image is visible on the homepage', async ({ homePage }) => {
@@ -479,12 +461,6 @@ test.describe('Smoke Test - Homepage', () => {
     await test.step('AC: The image is visible', async () => {
 
       await expect(homePage.ladiesTshirtsImage).toBeVisible();
-
-    });
-
-    await test.step('AC: The image is enabled', async () => {
-
-      await expect(homePage.ladiesTshirtsImage).toBeEnabled();
 
     });
 

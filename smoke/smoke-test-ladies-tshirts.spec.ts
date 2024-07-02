@@ -82,9 +82,9 @@ test.describe('Smoke Test - Ladies T-Shirts page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(ladiesTshirts.ladiesOuterwearButton).toBeEditable();
+      await expect(ladiesTshirts.ladiesOuterwearButton).toBeEnabled();
 
     });
 
@@ -106,9 +106,9 @@ test.describe('Smoke Test - Ladies T-Shirts page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(ladiesTshirts.ladiesOuterwearButton).toBeEditable();
+      await expect(ladiesTshirts.ladiesOuterwearButton).toBeEnabled();
 
     });
 
@@ -130,9 +130,9 @@ test.describe('Smoke Test - Ladies T-Shirts page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(ladiesTshirts.ladiesTshirtButton).toBeEditable();
+      await expect(ladiesTshirts.ladiesTshirtButton).toBeEnabled();
 
     });
 
@@ -154,9 +154,9 @@ test.describe('Smoke Test - Ladies T-Shirts page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(ladiesTshirts.ladiesTshirtButton).toBeEditable();
+      await expect(ladiesTshirts.ladiesTshirtButton).toBeEnabled();
 
     });
 
@@ -175,12 +175,6 @@ test.describe('Smoke Test - Ladies T-Shirts page', () => {
     await test.step('AC: The image is visible', async () => {
 
       await expect(ladiesTshirts.mainImage).toBeVisible();
-
-    });
-
-    await test.step('AC: The image is editable', async () => {
-
-      await expect(ladiesTshirts.mainImage).toBeEditable();
 
     });
 
@@ -226,9 +220,9 @@ test.describe('Smoke Test - Ladies T-Shirts page', () => {
 
     });
 
-    await test.step('AC: The product link is editable', async () =>{
+    await test.step('AC: The product link is enabled', async () =>{
 
-      await expect(ladiesTshirts.firstItemLink).toBeEditable();
+      await expect(ladiesTshirts.firstItemLink).toBeEnabled();
 
     });
 
@@ -282,9 +276,9 @@ test.describe('Smoke Test - Ladies T-Shirts page', () => {
 
     });
 
-    await test.step('AC: The product link is editable', async () =>{
+    await test.step('AC: The product link is enabled', async () =>{
 
-      await expect(ladiesTshirts.middleItemLink).toBeEditable();
+      await expect(ladiesTshirts.middleItemLink).toBeEnabled();
 
     });
 
@@ -338,9 +332,9 @@ test.describe('Smoke Test - Ladies T-Shirts page', () => {
 
     });
 
-    await test.step('AC: The product link is editable', async () =>{
+    await test.step('AC: The product link is enabled', async () =>{
 
-      await expect(ladiesTshirts.lastItemLink).toBeEditable();
+      await expect(ladiesTshirts.lastItemLink).toBeEnabled();
 
     });
 

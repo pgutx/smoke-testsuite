@@ -82,9 +82,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(productPage.mensOuterwearButton).toBeEditable();
+      await expect(productPage.mensOuterwearButton).toBeEnabled();
 
     });
 
@@ -106,9 +106,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(productPage.ladiesOuterwearButton).toBeEditable();
+      await expect(productPage.ladiesOuterwearButton).toBeEnabled();
 
     });
 
@@ -130,9 +130,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(productPage.mensTshirtButton).toBeEditable();
+      await expect(productPage.mensTshirtButton).toBeEnabled();
 
     });
 
@@ -154,9 +154,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(productPage.ladiesTshirtButton).toBeEditable();
+      await expect(productPage.ladiesTshirtButton).toBeEnabled();
 
     });
 
@@ -178,9 +178,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(productPage.backButton).toBeEditable();
+      await expect(productPage.backButton).toBeEnabled();
 
     });
 
@@ -202,12 +202,6 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The image is editable', async () => {
-
-      await expect(productPage.productImg).toBeEditable();
-
-    });
-
   });
 
   test('Scenario: Product has correct name', async ({ productPage }) => {
@@ -215,12 +209,6 @@ test.describe('Smoke Test - Product page', () => {
     await test.step('AC: The name is visible', async () => {
 
       await expect(productPage.productName).toBeVisible();
-
-    });
-
-    await test.step('AC: The name is editable', async () => {
-
-      await expect(productPage.productName).toBeEditable();
 
     });
 
@@ -240,12 +228,6 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The price is editable', async () => {
-
-      await expect(productPage.productPrice).toBeEditable();
-
-    });
-
     await test.step('AC: Correct price is displayed - $50.20', async () => {
 
       await expect(productPage.productPrice).toHaveText(/\$50.20/);
@@ -262,9 +244,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: Size option is editable', async () => {
+    await test.step('AC: Size option is enabled', async () => {
 
-      await expect(productPage.sizeSelect).toBeEditable();
+      await expect(productPage.sizeSelect).toBeEnabled();
 
     });
 
@@ -318,9 +300,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: Size option is editable', async () => {
+    await test.step('AC: Size option is enabled', async () => {
 
-      await expect(productPage.quantitySelect).toBeEditable();
+      await expect(productPage.quantitySelect).toBeEnabled();
 
     });
 
@@ -384,9 +366,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async() => {
+    await test.step('AC: The button is enabled', async() => {
 
-      await expect(productPage.addToCartButton).toBeEditable();
+      await expect(productPage.addToCartButton).toBeEnabled();
 
     });
 
@@ -416,9 +398,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(productPage.viewCartButton).toBeEditable();
+      await expect(productPage.viewCartButton).toBeEnabled();
 
     });
 
@@ -442,9 +424,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(productPage.checkoutButton).toBeEditable();
+      await expect(productPage.checkoutButton).toBeEnabled();
 
     });
 
@@ -468,9 +450,9 @@ test.describe('Smoke Test - Product page', () => {
 
     });
 
-    await test.step('AC: The button is editable', async () => {
+    await test.step('AC: The button is enabled', async () => {
 
-      await expect(productPage.closeDialogButton).toBeEditable();
+      await expect(productPage.closeDialogButton).toBeEnabled();
 
     });
 
