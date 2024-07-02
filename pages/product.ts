@@ -58,6 +58,10 @@ export class ProductPage {
       await this.cartButton.click();
     }
 
+    async clickPopulatedCart() {
+      await this.populatedCartButton.click();
+    }
+
     async clickMensOuterwearButton() {
       await this.mensOuterwearButton.click();
     }

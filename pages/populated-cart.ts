@@ -27,7 +27,7 @@ export class PopulatedCart {
       this.cartHeading = page.getByRole('heading', { name: 'Your Cart' });
       this.itemNumber = page.getByText('(1 item)');
       this.itemImage = page.getByRole('img', { name: 'Men\'s Tech Shell Full-Zip'});
-      this.itemName = page.locator('a').filter({ hasText: 'Men\'s Tech Shell Full-Zip' });
+      this.itemName = page.locator('shop-cart-item').getByText('Men\'s Tech Shell Full-Zip');
       this.quantitySelect = page.getByLabel('Change quantity');
       this.sizeField = page.locator('.size');
       this.priceField = page.locator('shop-cart-item').getByText('$');

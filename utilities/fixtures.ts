@@ -1,4 +1,4 @@
-import { test as base } from '@playwright/test';
+import { test as base, expect } from '@playwright/test';
 import { HomePage } from '../pages/homepage';
 import { MensOuterwear } from '../pages/mens-outerwear';
 import { LadiesOuterwear } from '../pages/ladies-outerwear';
@@ -42,11 +42,15 @@ export const test = base.extend<pageFixtures>({
   emptyCart: async({ page }, use) => {
     await use(new EmptyCart(page));
   },
-  populatedCart: async({ page, productPage }, use) => {
+  populatedCart: async({ page, productPage, mensOuterwear }, use) => {
 
-    await productPage.goToProductPage();
+    await mensOuterwear.goToMensOuterwearPage();
+
+    await mensOuterwear.clickFirstProductLink();
 
     await productPage.clickAddToCartButton();
+
+    await expect.soft(productPage.dialogPopup).toBeVisible();
 
     await productPage.clickViewCartButton();
 
