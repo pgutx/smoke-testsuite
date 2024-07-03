@@ -1,4 +1,5 @@
-name: ${{ github.actor }} - Smoke Test
+name: Smoke Test
+run-name: ${{ github.actor }} - smoke test workflow
 on:
   workflow_dispatch:
 jobs:
